@@ -1,0 +1,22 @@
+<ul class="list-group rounded-0" *ngFor="let task of newTaskList">
+  <li
+    class="list-group-item border-0 d-flex align-items-center ps-0 justify-content-between"
+  >
+    <div>
+      <input
+        class="form-check-input me-3"
+        type="checkbox"
+        id="{{ task.id }}"
+        (change)="toggleCheck($event)"
+      />
+      <ng-container *ngIf="!task.status">
+        <span>{{ task.task }}</span></ng-container
+      >
+      <ng-container *ngIf="task.status">
+        <s>{{ task.task }}</s></ng-container
+      >
+    </div>
+
+    <button class="btn btn-danger" (click)="deleteTask(task)">Delete</button>
+  </li>
+</ul>

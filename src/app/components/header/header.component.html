@@ -1,0 +1,16 @@
+<header>
+  <h2>Todo App</h2>
+  <div class="d-flex justify-content-center">
+    <input
+      type="text"
+      class="form-control mx-2"
+      aria-label="Default"
+      aria-describedby="inputGroup-sizing-default"
+      placeholder="Add New Task"
+      [(ngModel)]="newTaskInput"
+    />
+    <button type="button" class="btn btn-dark" (click)="addNewTask()">
+      Add
+    </button>
+  </div>
+</header>
